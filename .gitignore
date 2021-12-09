@@ -1,0 +1,8 @@
+# node.js
+#
+node_modules/
+platforms/
+plugins/
+typings/
+accurascan
+package-lock.json
