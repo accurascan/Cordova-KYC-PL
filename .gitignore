@@ -6,3 +6,4 @@ plugins/
 typings/
 accurascan
 package-lock.json
+.DS_Store
