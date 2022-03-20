@@ -1,3 +1,4 @@
+//Default config of liveness check.
 struct LivenessConfigs {
     static let feedbackTextSize: Float = 18.0
 

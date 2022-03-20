@@ -1,4 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
+<!-- Messages of check face match. -->
 <resources>
     <integer name="fm_feedbackTextSize">18</integer>
     <string name="fm_feedBackframeMessage">Frame Your Face</string>

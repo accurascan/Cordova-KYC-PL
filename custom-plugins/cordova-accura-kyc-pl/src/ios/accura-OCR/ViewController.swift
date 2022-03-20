@@ -4,6 +4,7 @@ import AVFoundation
 import AccuraOCR
 import AccuraLiveness_fm
 
+//ViewController of scanning documents.
 class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
     @IBOutlet weak var _viewLayer: UIView!

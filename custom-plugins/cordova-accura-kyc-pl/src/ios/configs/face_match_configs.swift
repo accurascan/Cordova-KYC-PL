@@ -1,3 +1,4 @@
+//Default config of face match check.
 struct FaceMatchConfigs {
     static let fm_feedbackTextSize = 18
 

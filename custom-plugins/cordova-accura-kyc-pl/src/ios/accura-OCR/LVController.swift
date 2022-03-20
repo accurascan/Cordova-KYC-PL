@@ -2,6 +2,7 @@ import UIKit
 import AccuraLiveness_fm
 import AVFoundation
 
+//ViewController of liveness check.
 class LVController: UIViewController {
     
     var audioPath: URL? = nil

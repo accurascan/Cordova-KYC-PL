@@ -95,11 +95,13 @@ struct gl {
        return image1
    }
     
+    //Code for celan face match.
     @objc(cleanFaceMatch:)
     func cleanFM(command: CDVInvokedUrlCommand) {
         ACCURAService.cleanFaceData()
     }
     
+    //Code for get license info from SDK.
     @objc(getMetadata:)
     func getMetadata(command: CDVInvokedUrlCommand) {
         var pluginResult = CDVPluginResult(
@@ -169,6 +171,7 @@ struct gl {
         
     }
 
+    //Code for setup messages & config of scanning window.
     @objc(setupAccuraConfig:)
     func setupAccuraConfig(command: CDVInvokedUrlCommand) {
 
@@ -189,6 +192,7 @@ struct gl {
         )
     }
     
+    //Code for MRZ document scanning.
     @objc(startMRZ:)
     func startMRZ(command: CDVInvokedUrlCommand) {
         gl.ocrClId = command.callbackId
@@ -216,6 +220,7 @@ struct gl {
         checkForDownloadMedia(vc: viewController)
     }
     
+    //Code for bank card scanning.
     @objc(startBankCard:)
     func startBankCard(command: CDVInvokedUrlCommand) {
         gl.ocrClId = command.callbackId
@@ -232,6 +237,7 @@ struct gl {
         checkForDownloadMedia(vc: viewController)
     }
     
+    //Code for barcode scanning.
     @objc(startBarcode:)
     func startBarcode(command: CDVInvokedUrlCommand) {
         gl.ocrClId = command.callbackId
@@ -247,6 +253,7 @@ struct gl {
         checkForDownloadMedia(vc: viewController)
     }
     
+    //Code for OCR documents scanning with country & card selection.
     @objc(startOcrWithCard:)
     func startOcrWithCard(command: CDVInvokedUrlCommand) {
         gl.type = "ocr"
@@ -272,6 +279,7 @@ struct gl {
         checkForDownloadMedia(vc: viewController)
     }
     
+    //Code for check liveness.
     @objc(startLiveness:)
     func startLiveness(command: CDVInvokedUrlCommand) {
         //set liveness url
@@ -293,8 +301,7 @@ struct gl {
         self.viewController.view.window?.rootViewController = nav
     }
     
-    
-    
+    //Code for check face match.
     @objc(startFaceMatch:)
     func startFaceMatch(command: CDVInvokedUrlCommand) {
         gl.type = "fm"
@@ -395,6 +402,8 @@ struct gl {
         )
     }
 }
+
+//Code for navigation bar style.
 class NavigationController: UINavigationController {
 
     override var shouldAutorotate: Bool {

@@ -1,6 +1,7 @@
 import UIKit
 import AccuraLiveness_fm
 
+//ViewController of face match check.
 class FMController: UIViewController {
     var livenessConfigs:[String: Any] = [:]
     var commandDelegate:CDVCommandDelegate? = nil

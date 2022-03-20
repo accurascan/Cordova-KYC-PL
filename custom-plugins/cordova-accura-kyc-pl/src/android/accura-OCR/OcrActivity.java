@@ -54,6 +54,7 @@ import java.util.List;
 import static accura.kyc.plugin.ACCURAService.getImageUri;
 import static accura.kyc.plugin.ACCURAService.getSaltString;
 
+//Activity for scan documents.
 public class OcrActivity extends SensorsActivity implements OcrCallback {
 
     private static final String TAG = OcrActivity.class.getSimpleName();

@@ -132,6 +132,7 @@ public class ACCURAService extends CordovaPlugin {
             return true;
         }
 
+        //Code for get license info from SDK.
         if (action.equals("getMetadata")) {
             ocrCL = callbackContext;
             RecogEngine recogEngine = new RecogEngine();
@@ -188,6 +189,7 @@ public class ACCURAService extends CordovaPlugin {
             callbackContext.success(results);
             return true;
         }
+        //Code for celan face match.
         if (action.equals("cleanFaceMatch")) {
             ACCURAService.face1 = null;
             ACCURAService.face2 = null;
@@ -211,6 +213,7 @@ public class ACCURAService extends CordovaPlugin {
             }
         }
 
+        //Code for setup config & messages into scanning window.
         if (action.equals("setupAccuraConfig")) {
 
             JSONObject messagesConf = args.getJSONObject(0);
@@ -219,7 +222,7 @@ public class ACCURAService extends CordovaPlugin {
             return true;
         }
         
-
+        //Code for OCR documents scanning with country & card selection.
         if (action.equals("startOcrWithCard")) {
             int country = args.getInt(1);
             int card = args.getInt(2);
@@ -241,6 +244,8 @@ public class ACCURAService extends CordovaPlugin {
             cordova.getActivity().startActivity(myIntent);
             return true;
         }
+
+        //Code for MRZ document scanning.
         if (action.equals("startMRZ")) {
             String type = args.getString(1);
             String countryList = args.getString(2);
@@ -258,6 +263,8 @@ public class ACCURAService extends CordovaPlugin {
             cordova.getActivity().startActivity(myIntent);
             return true;
         }
+
+        //Code for Bankcard scanning.
         if (action.equals("startBankCard")) {
             Intent myIntent = new Intent(cordova.getActivity(), OcrActivity.class);
             String appOrientation = args.getString(1);
@@ -271,6 +278,8 @@ public class ACCURAService extends CordovaPlugin {
             cordova.getActivity().startActivity(myIntent);
             return true;
         }
+
+        //Code for Barcode scanning.
         if (action.equals("startBarcode")) {
             String type = args.getString(1);
             String appOrientation = args.getString(2);
@@ -286,6 +295,8 @@ public class ACCURAService extends CordovaPlugin {
             cordova.getActivity().startActivity(myIntent);
             return true;
         }
+
+        //Code for check face match.
         if (action.equals("startFaceMatch")) {
             JSONObject config = args.getJSONObject(1);
             String appOrientation = args.getString(2);
@@ -299,6 +310,7 @@ public class ACCURAService extends CordovaPlugin {
             return true;
         }
 
+        //Code for check liveness.
         if (action.equals("startLiveness")) {
             faceCL = callbackContext;
             Intent intent = new Intent(cordova.getActivity(), FaceMatchActivity.class);
